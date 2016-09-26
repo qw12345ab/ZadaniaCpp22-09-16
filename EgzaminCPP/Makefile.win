@@ -5,11 +5,11 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = ../EgzaminCPP/EgzaminCPP_private.res
-OBJ      = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o $(RES)
-LINKOBJ  = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o $(RES)
-LIBS     = -L"D:/programy/Dev-Cpp/MinGW64/lib" -L"D:/programy/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"D:/programy/Dev-Cpp/MinGW64/include" -I"D:/programy/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/programy/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"D:/programy/Dev-Cpp/MinGW64/include" -I"D:/programy/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/programy/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/programy/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o $(RES)
+LINKOBJ  = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o $(RES)
+LIBS     = -L"D:/programy/MinGW/lib" -L"D:/programy/MinGW/mingw32/lib" -static-libstdc++ -static-libgcc
+INCS     = -I"D:/programy/MinGW/include" -I"D:/programy/MinGW/mingw32/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include"
+CXXINCS  = -I"D:/programy/MinGW/include" -I"D:/programy/MinGW/mingw32/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include/c++"
 BIN      = EgzaminCPP.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
@@ -33,6 +33,30 @@ $(BIN): $(OBJ)
 
 ../EgzaminCPP/zad2.o: 1/zad2.cpp
 	$(CPP) -c 1/zad2.cpp -o ../EgzaminCPP/zad2.o $(CXXFLAGS)
+
+../EgzaminCPP/zad3.o: 1/zad3.cpp
+	$(CPP) -c 1/zad3.cpp -o ../EgzaminCPP/zad3.o $(CXXFLAGS)
+
+../EgzaminCPP/zad4.o: 1/zad4.cpp
+	$(CPP) -c 1/zad4.cpp -o ../EgzaminCPP/zad4.o $(CXXFLAGS)
+
+../EgzaminCPP/zad5.o: 1/zad5.cpp
+	$(CPP) -c 1/zad5.cpp -o ../EgzaminCPP/zad5.o $(CXXFLAGS)
+
+../EgzaminCPP/zad6.o: 1/zad6.cpp
+	$(CPP) -c 1/zad6.cpp -o ../EgzaminCPP/zad6.o $(CXXFLAGS)
+
+../EgzaminCPP/zad2.1.o: 2/zad2.1.cpp
+	$(CPP) -c 2/zad2.1.cpp -o ../EgzaminCPP/zad2.1.o $(CXXFLAGS)
+
+../EgzaminCPP/zad2.6.o: 2/zad2.6.cpp
+	$(CPP) -c 2/zad2.6.cpp -o ../EgzaminCPP/zad2.6.o $(CXXFLAGS)
+
+../EgzaminCPP/zad2.7.o: 2/zad2.7.cpp
+	$(CPP) -c 2/zad2.7.cpp -o ../EgzaminCPP/zad2.7.o $(CXXFLAGS)
+
+../EgzaminCPP/zad2.8.o: 2/zad2.8.cpp
+	$(CPP) -c 2/zad2.8.cpp -o ../EgzaminCPP/zad2.8.o $(CXXFLAGS)
 
 ../EgzaminCPP/EgzaminCPP_private.res: EgzaminCPP_private.rc 
 	$(WINDRES) -i EgzaminCPP_private.rc --input-format=rc -o ../EgzaminCPP/EgzaminCPP_private.res -O coff 
