@@ -4,6 +4,7 @@
 	
 	// b.) Wskaznik do elementu klasy A typu int.
 	// class A {
+	// public:
 	// int zm1;
 	// }
 	// A a;
