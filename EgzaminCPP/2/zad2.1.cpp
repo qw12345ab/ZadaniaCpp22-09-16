@@ -3,8 +3,12 @@
 	//char (*wsk[5]) (int, char) = &fun;
 	
 	// b.) Wskaznik do elementu klasy A typu int.
+	// class A {
+	// public:
+	// int zm1;
+	// }
 	// A a;
-	// int * wsk = &a;
+	// int * wsk = &a.zm1;
 	
 	// c.) Wskaznik do funkcji skladowej klasy A: int fun (int);
 	// A a;
