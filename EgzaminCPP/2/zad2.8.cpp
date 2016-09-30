@@ -1,13 +1,56 @@
-class Punkt {};
+class Punkt {
+	
+	float wysokosc, szerokosc, promien;
+	
+	public:
+		
+	virtual void rysuj();
+};
 
-class Kwadrat : Punkt {};
+class Kwadrat : Punkt {
+	
+	public:
+	
+	void rysuj();
+	
+};
 
-class Okrag : Kwadrat {};
+class Okrag : Kwadrat {
 
-class Prostokat : Kwadrat {};
+	public:
+	
+	void rysuj();
 
-class Romb : Prostokat{};
+};
 
-class Elipsa : Prostokat{};
+class Prostokat : Kwadrat {
 
-class Trojkat : Prostokat{};
+	public:
+	
+	void rysuj();
+
+};
+
+class Romb : Prostokat{
+
+	public:
+	
+	void rysuj();
+
+};
+
+class Elipsa : Prostokat{
+
+	public:
+	
+	void rysuj();
+
+};
+
+class Trojkat : Prostokat{
+
+	public:
+	
+	void rysuj();
+
+};
