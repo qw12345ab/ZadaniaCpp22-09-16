@@ -5,8 +5,8 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = ../EgzaminCPP/EgzaminCPP_private.res
-OBJ      = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o ../EgzaminCPP/EgzOb1.1.o ../EgzaminCPP/EgzOb1.3.o ../EgzaminCPP/EgzOb2.3.o $(RES)
-LINKOBJ  = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o ../EgzaminCPP/EgzOb1.1.o ../EgzaminCPP/EgzOb1.3.o ../EgzaminCPP/EgzOb2.3.o $(RES)
+OBJ      = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o ../EgzaminCPP/EgzOb1.1.o ../EgzaminCPP/EgzOb1.3.o ../EgzaminCPP/EgzOb2.3.o ../EgzaminCPP/EgzOb3.3.o ../EgzaminCPP/EgzOb4.3.o ../EgzaminCPP/EgzOb5.1.o $(RES)
+LINKOBJ  = ../EgzaminCPP/Main.o ../EgzaminCPP/zad1.o ../EgzaminCPP/zad2.o ../EgzaminCPP/zad3.o ../EgzaminCPP/zad4.o ../EgzaminCPP/zad5.o ../EgzaminCPP/zad6.o ../EgzaminCPP/zad2.1.o ../EgzaminCPP/zad2.6.o ../EgzaminCPP/zad2.7.o ../EgzaminCPP/zad2.8.o ../EgzaminCPP/EgzOb1.1.o ../EgzaminCPP/EgzOb1.3.o ../EgzaminCPP/EgzOb2.3.o ../EgzaminCPP/EgzOb3.3.o ../EgzaminCPP/EgzOb4.3.o ../EgzaminCPP/EgzOb5.1.o $(RES)
 LIBS     = -L"D:/programy/MinGW/lib" -L"D:/programy/MinGW/mingw32/lib" -static-libstdc++ -static-libgcc
 INCS     = -I"D:/programy/MinGW/include" -I"D:/programy/MinGW/mingw32/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include"
 CXXINCS  = -I"D:/programy/MinGW/include" -I"D:/programy/MinGW/mingw32/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include" -I"D:/programy/MinGW/lib/gcc/mingw32/5.3.0/include/c++"
@@ -66,6 +66,15 @@ $(BIN): $(OBJ)
 
 ../EgzaminCPP/EgzOb2.3.o: EgzOb/2/EgzOb2.3.cpp
 	$(CPP) -c EgzOb/2/EgzOb2.3.cpp -o ../EgzaminCPP/EgzOb2.3.o $(CXXFLAGS)
+
+../EgzaminCPP/EgzOb3.3.o: 3/EgzOb3.3.cpp
+	$(CPP) -c 3/EgzOb3.3.cpp -o ../EgzaminCPP/EgzOb3.3.o $(CXXFLAGS)
+
+../EgzaminCPP/EgzOb4.3.o: 4/EgzOb4.3.cpp
+	$(CPP) -c 4/EgzOb4.3.cpp -o ../EgzaminCPP/EgzOb4.3.o $(CXXFLAGS)
+
+../EgzaminCPP/EgzOb5.1.o: 5/EgzOb5.1.cpp
+	$(CPP) -c 5/EgzOb5.1.cpp -o ../EgzaminCPP/EgzOb5.1.o $(CXXFLAGS)
 
 ../EgzaminCPP/EgzaminCPP_private.res: EgzaminCPP_private.rc 
 	$(WINDRES) -i EgzaminCPP_private.rc --input-format=rc -o ../EgzaminCPP/EgzaminCPP_private.res -O coff 
